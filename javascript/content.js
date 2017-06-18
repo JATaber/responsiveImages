@@ -26,20 +26,17 @@ request.onload = function(){
 
                 for( var i = 0; i < data.results.length; i++){
 
-                    var smallImg = data.results[i].urls.small;
-                    var medImg = data.results[i].urls.regular;
-                    var largeImg = data.results[i].urls.raw;
+                    var smallImg = data.results[i].urls.thumb;
+                    var medImg = data.results[i].urls.small;
+                    var largeImg = data.results[i].urls.regular;
 
                     pictureData += '<article>';
                     pictureData += '<a href=" ' +data.results[i].links.html + ' " target="_blank">';
                     pictureData += '<img src=" '+smallImg+' " ' +
-                        'srcset=" '+smallImg+' 300w, '
-                                +medImg+' 600w, '
-                                +largeImg+' 800w" ' +
-                        'sizes="(max-width: 599px)100vw, ' +
-                                '(min-width: 600px)25vw, ' +
-                                '599px" ' +
-                                'alt="Travel Image">';
+                        'srcset=" '+smallImg+' 200w, '
+                                +medImg+' 400w, '
+                                +largeImg+' 1080w"' +
+                                ' alt="Travel Image">';
                     pictureData += '</a>';
                     pictureData += '</article>';
                 }
