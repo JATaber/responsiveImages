@@ -7,6 +7,9 @@ var clientID = "2685ef356706bf8a536aa7c97e824fb0fe5d52a679999a7faa776ddd36313ced
 
 var api = 'https://api.unsplash.com/search/photos?client_id='+ clientID +'&query=travel&per_page=12';
 
+var userImg = "../images/user-icon.svg";
+var heartImg = "../images/heart.svg";
+
 request.onload = function(){
     if(request.status >= 200 && request.status < 400){
         var data = JSON.parse(request.responseText);
@@ -40,8 +43,8 @@ request.onload = function(){
                                     largeImg+' 1080w"' +
                         ' alt="Travel Image">';
                     pictureData += '<div class="picInfo">';
-                    pictureData += '<h2><img class="userIcon" src="../images/user-icon.svg" alt="user icon"><strong>'+name+'</strong>';
-                    pictureData += '<h3><img class="heartIcon" src="../images/heart.svg" alt="heart icon"><strong>'+likes+'</strong>';
+                    pictureData += '<h2><img class="userIcon" src=" '+userImg+' " alt="user icon"><strong>'+name+'</strong>';
+                    pictureData += '<h3><img class="heartIcon" src=" '+heartImg+' " alt="heart icon"><strong>'+likes+'</strong>';
                     pictureData += '</div>';
                     pictureData += '</a>';
                     pictureData += '</article>';
