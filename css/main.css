@@ -115,6 +115,9 @@ article {
     width: 100%;
     height: 100%; }
 
+h2 .userIcon {
+  background: url("../images/user-icon.svg") no-repeat; }
+
 @media (min-width: 1200px) {
   article:hover .picInfo {
     visibility: visible;

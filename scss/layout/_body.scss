@@ -144,6 +144,12 @@ article{
   }
 }
 
+h2{
+  .userIcon{
+    background: $user-icon;
+  }
+}
+
 article:hover{
   .picInfo{
     @include mq(desktop){
