@@ -69,11 +69,4 @@ document.getElementById("logo").addEventListener("click", animation);
 
 function animation(){
     document.getElementById('globe').classList.toggle("animate");
-    /*
-    if(img.contains("animate")){
-        img.remove("animate");
-    }else{
-        img.add("animate");
-    }
-    */
 }
