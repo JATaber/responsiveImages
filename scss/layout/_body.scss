@@ -150,6 +150,12 @@ h2{
   }
 }
 
+h3{
+  .heartIcon{
+    background: $heart-icon;
+  }
+}
+
 article:hover{
   .picInfo{
     @include mq(desktop){

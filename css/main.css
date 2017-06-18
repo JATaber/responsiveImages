@@ -118,6 +118,9 @@ article {
 h2 .userIcon {
   background: url("../images/user-icon.svg") no-repeat; }
 
+h3 .heartIcon {
+  background: url("../images/heart.svg") no-repeat; }
+
 @media (min-width: 1200px) {
   article:hover .picInfo {
     visibility: visible;
