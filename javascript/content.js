@@ -29,6 +29,8 @@ request.onload = function(){
                     var smallImg = data.results[i].urls.thumb;
                     var medImg = data.results[i].urls.small;
                     var largeImg = data.results[i].urls.regular;
+                    var likes = data.results[i].likes;
+                    var name = data.results[i].user.name;
 
                     pictureData += '<article>';
                     pictureData += '<a href=" ' +data.results[i].links.html + ' " target="_blank">';
@@ -37,14 +39,22 @@ request.onload = function(){
                                 +medImg+' 400w, '
                                 +largeImg+' 1080w"' +
                                 ' alt="Travel Image">';
+                    pictureData += '<div class="picInfo">';
+                    pictureData += '<h2><img src="../images/user-icon.svg" alt="user icon"><strong>'+name+'</strong>';
+                    pictureData += '<h3><img src="../images/heart.svg" alt="heart icon"><strong>'+likes+'</strong>';
+                    pictureData += '</div>';
                     pictureData += '</a>';
                     pictureData += '</article>';
                 }
+
+
             }else{
                 pictureData += '<p>Looks like something has gone wrong!</p>';
             }
 
-            picture.insertAdjacentHTML('beforeEnd', pictureData);
+
+
+            picture.insertAdjacentHTML('afterbegin', pictureData);
 
         }else{
             console.log('response error');
