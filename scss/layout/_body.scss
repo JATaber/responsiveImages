@@ -1,2 +1,161 @@
 @import '../helpers/_variables.scss';
 @import '../helpers/_mixins.scss';
+
+html{
+  font-size: 62.5%;
+}
+
+header{
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(tablet){
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(desktop){
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+section{
+  @extend header
+}
+
+footer{
+  @extend header
+}
+
+body{
+  font-family: $font-stack;
+}
+
+h1{
+  text-align: center;
+
+  strong{
+    font-size: $h1-fontSize;
+
+    @include mq(teblet){
+      font-size: 40px;
+    }
+
+    @include mq(desktop){
+      font-size: 50px;
+    }
+  }
+
+  strong::before{
+    @include lineBreak;
+  }
+}
+
+header{
+  margin-bottom: 5em;
+  margin-top: 5em;
+
+  p{
+    text-align: center;
+    font-size: $font-size;
+
+    @include mq(tablet){
+      font-size: $h3-fontSize;
+    }
+
+    @include mq(desktop){
+      font-size: $h2-fontSize;
+    }
+  }
+}
+
+.images{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+article{
+  font-size: 0;
+  display: flex;
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+
+  @include mq(tablet){
+    width: calc(50% - 2.2rem);
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+
+  @include mq(desktop){
+    width: calc(33% - 2.2rem);
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .picInfo{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 1em;
+    background-color: black;
+    opacity: 0.75;
+    color: white;
+    font-size: $font-size;
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - 2.4rem);
+    bottom: 1px;
+
+    *{
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    @include mq(desktop){
+      transform: scaleY(0);
+      overflow: hidden;
+      transition: transform 1s ease-in-out;
+
+    }
+
+    h2{
+      padding-bottom: 10px;
+    }
+
+    strong{
+      padding-left: 10px;
+    }
+  }
+
+  .result{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+article:hover{
+  .picInfo{
+    @include mq(desktop){
+      transform: scaleY(1);
+
+    }
+  }
+}
+
+footer{
+  font-size: $font-size;
+
+  a{
+    text-decoration: none;
+  }
+}

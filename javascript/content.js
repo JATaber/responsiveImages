@@ -34,14 +34,14 @@ request.onload = function(){
 
                     pictureData += '<article>';
                     pictureData += '<a href=" ' +data.results[i].links.html + ' " target="_blank">';
-                    pictureData += '<img src=" '+smallImg+' " ' +
+                    pictureData += '<img class="result" src=" '+smallImg+' " ' +
                         'srcset=" '+smallImg+' 200w, ' +
                                     medImg+' 400w, ' +
                                     largeImg+' 1080w"' +
                         ' alt="Travel Image">';
                     pictureData += '<div class="picInfo">';
-                    pictureData += '<h2><img src="../images/user-icon.svg" alt="user icon"><strong>'+name+'</strong>';
-                    pictureData += '<h3><img src="../images/heart.svg" alt="heart icon"><strong>'+likes+'</strong>';
+                    pictureData += '<h2><img class="userIcon" src="../images/user-icon.svg" alt="user icon"><strong>'+name+'</strong>';
+                    pictureData += '<h3><img class="heartIcon" src="../images/heart.svg" alt="heart icon"><strong>'+likes+'</strong>';
                     pictureData += '</div>';
                     pictureData += '</a>';
                     pictureData += '</article>';

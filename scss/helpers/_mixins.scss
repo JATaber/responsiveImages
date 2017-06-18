@@ -6,3 +6,8 @@
     @media (min-width: 1200px){@content}
   }
 }
+
+@mixin lineBreak{
+  content:"\A";
+  white-space: pre;
+}
